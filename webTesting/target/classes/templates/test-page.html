@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/test-page.css"/>
+</head>
+<body>
+<header>
+    <div class="header">
+        <div class="logo">
+            <img class="logo_icon" src="/images/лого.png" alt="Logo">
+        </div>
+        <div class="navigation">
+            <img class="navigation_icon" src="/images/навигация.png" alt="navigation">
+            <p>вул. Лабораторна 1/62 літ.А <br> м.Київ, Україна, 03150</p>
+        </div>
+        <div class="phone">
+            <img class="phone_icon" src="/images/трубка.png" alt="phone">
+            <p>044 521-20-74</p>
+        </div>
+        <div class="email">
+            <img class="email_icon" src="/images/пошта.png" alt="email">
+            <a href="cpk@kyivcity.gov.ua">cpk@kyivcity.gov.ua</a>
+        </div>
+    </div>
+</header>
+<div class="links">
+    <div class="link">
+        <a href="https://cpk.org.ua/">Повернутися на головну</a>
+        <a href="https://cpk.org.ua/online-lessons/">Онлайн навчання</a>
+        <a href="https://cpk.org.ua/testing/">Онлайн тестування</a>
+        <a href="https://cpk.org.ua/metodychne-zabezpechennya/">Методичне забезпечення</a>
+    </div>
+</div>
+
+<form method="post" action="/submit-answer">
+    <div id="quiz-container">
+        <div th:each="test, iterStat : ${tests}" th:id="'question-' + ${iterStat.index}" class="question-box" th:style="${iterStat.index != 0} ? 'display: none;'">
+            <h2 th:text="${test.title}"></h2>
+
+            <div th:each="option, optionIndex : ${test.description.split(';')}">
+                <label>
+                    <input type="radio" th:name="'answer_' + ${test.id}" th:value="${optionIndex.index}">
+                    <span th:text="${option}"></span>
+                </label>
+            </div>
+
+            <button type="button" class="next-btn" onclick="showNextQuestion()">Далі</button>
+        </div>
+    </div>
+</form>
+<script src="/js/test-block.js"></script>
+</body>
+</html>
