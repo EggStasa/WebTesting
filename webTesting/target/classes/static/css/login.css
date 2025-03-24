@@ -1,0 +1,147 @@
+.header{
+    background-color: #C9C9C9;
+    text-align: left;
+    height: 120px;
+    width: 100%;
+    }
+.logo{
+    display: inline-block;
+    height: 130px;
+    width: 320px;
+    }
+.logo_icon{
+    display: inline-block;
+    height: 120px;
+    width: 350px;
+
+    }
+.navigation{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 100px;
+    margin-bottom: 120px;
+    }
+.navigation_icon{
+    height: 40px;
+    width: 30px;
+    vertical-align: middle;
+    display: inline-block;
+    }
+.navigation p{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.phone_icon{
+    display: inline-block;
+    vertical-align: middle;
+    height: 40px;
+    width: 40px;
+    }
+.phone p{
+    display: inline-block;
+    vertical-align: middle;
+    }
+.phone{
+display: inline-block;
+vertical-align: middle;
+margin-left: 50px;
+margin-bottom: 120px;
+}
+.email{
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 50px;
+    margin-bottom: 120px;
+    }
+.email a{
+        display: inline-block;
+        vertical-align: middle;
+        color: black;
+        text-decoration: none;
+        }
+.email_icon{
+    display: inline-block;
+    vertical-align: middle;
+    height: 40px;
+    width: 40px;
+    }
+
+.links{
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 15px;
+    background-color: #8cb687;
+    margin: 20px;
+    padding: 10px;
+    height: 250px;
+    width: 200px;
+    }
+.link{
+    height: 230px;
+    width: 180px;
+    border-radius: 15px;
+    display: inline-block;
+    background-color: white;
+    margin: 10px;
+    vertical-align: middle;
+    text-align: center;
+    }
+.link a{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.test_theme{
+    background-color: green;
+    display: inline-block;
+    margin-bottom:40px;
+    }
+.testing{
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 50px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Медиазапросы для адаптивности */
+@media (max-width: 768px) {
+    .header {
+        text-align: center;
+        height: auto;
+    }
+
+    .navigation, .phone, .email {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        height: 100px;
+        width: 100%;
+    }
+
+    .navigation_icon, .phone_icon, .email_icon {
+        height: 30px;
+        width: 30px;
+    }
+
+    .navigation p, .phone p, .email a {
+        margin-left: 5px;
+    }
+}
